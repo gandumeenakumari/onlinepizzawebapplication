@@ -36,6 +36,26 @@ namespace onlinepizzawebapplication.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("onlinepizzawebapplication.Models.login", b =>
+                {
+                    b.Property<Guid>("loginid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("loginid");
+
+                    b.ToTable("login");
+                });
+
             modelBuilder.Entity("onlinepizzawebapplication.Models.Orders", b =>
                 {
                     b.Property<Guid>("orderid")

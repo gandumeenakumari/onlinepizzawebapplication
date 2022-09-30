@@ -12,7 +12,7 @@ using onlinepizzawebapplication.Data;
 namespace onlinepizzawebapplication.Migrations
 {
     [DbContext(typeof(FullStackDbContext))]
-    [Migration("20220923044749_Initial Migration")]
+    [Migration("20220929130933_Initial Migration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,6 +36,26 @@ namespace onlinepizzawebapplication.Migrations
                     b.HasKey("categoryid");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("onlinepizzawebapplication.Models.login", b =>
+                {
+                    b.Property<Guid>("loginid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("loginid");
+
+                    b.ToTable("login");
                 });
 
             modelBuilder.Entity("onlinepizzawebapplication.Models.Orders", b =>

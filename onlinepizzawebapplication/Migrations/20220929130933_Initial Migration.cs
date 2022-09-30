@@ -22,6 +22,20 @@ namespace onlinepizzawebapplication.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "login",
+                columns: table => new
+                {
+                    loginid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    password = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_login", x => x.loginid);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Orders",
                 columns: table => new
                 {
@@ -69,6 +83,9 @@ namespace onlinepizzawebapplication.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "login");
 
             migrationBuilder.DropTable(
                 name: "Orders");

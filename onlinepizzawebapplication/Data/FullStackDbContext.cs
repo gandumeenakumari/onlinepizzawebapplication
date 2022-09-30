@@ -11,6 +11,7 @@ namespace onlinepizzawebapplication.Data
         public DbSet<Categories> Categories { get; set; }
         public DbSet<Orders> Orders { get; set; }
         public DbSet<Reviews> Reviews { get; set; }
+        public DbSet<login> login { get; set; }
 
     }
 }
