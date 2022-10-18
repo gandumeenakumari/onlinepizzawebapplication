@@ -40,9 +40,9 @@ namespace onlinepizzawebapplication.Migrations
                 columns: table => new
                 {
                     orderid = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    category = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    pizzaname = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    price = table.Column<int>(type: "int", nullable: false)
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    address = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

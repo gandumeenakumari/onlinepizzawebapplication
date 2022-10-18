@@ -12,7 +12,7 @@ using onlinepizzawebapplication.Data;
 namespace onlinepizzawebapplication.Migrations
 {
     [DbContext(typeof(FullStackDbContext))]
-    [Migration("20220929130933_Initial Migration")]
+    [Migration("20221010070134_Initial Migration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -64,14 +64,14 @@ namespace onlinepizzawebapplication.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("category")
+                    b.Property<string>("address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("pizzaname")
+                    b.Property<string>("email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("price")
-                        .HasColumnType("int");
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("orderid");
 

@@ -1,4 +1,6 @@
-﻿namespace onlinepizzawebapplication.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace onlinepizzawebapplication.Models
 {
     public class Pizza
     {
@@ -6,6 +8,5 @@
         public string name { get; set; }
         public string category { get; set; }
         public int price { get; set; }
-
     }
 }

@@ -6,8 +6,9 @@ namespace onlinepizzawebapplication.Models
     {
         [Key]
         public Guid orderid { get; set; }
-        public string category { get; set; }
-        public string pizzaname { get; set; }
-        public int price { get; set; }
+        public string name{ get; set; }
+        public string email { get; set; }
+        public string address { get; set; }
+
     }
 }

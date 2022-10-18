@@ -38,9 +38,9 @@ namespace onlinepizzawebapplication.Controllers
             {
                 return NotFound();
             }
-            orders.category = UpdateOrdersRequest.category;
-            orders.pizzaname = UpdateOrdersRequest.pizzaname;
-            orders.price=UpdateOrdersRequest.price;
+            orders.name = UpdateOrdersRequest.name;
+            orders.email = UpdateOrdersRequest.email;
+            orders.address=UpdateOrdersRequest.address;
 
             await _fullStackDbContext.SaveChangesAsync();
             return Ok(orders);
